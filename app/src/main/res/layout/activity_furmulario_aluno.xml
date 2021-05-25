@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText android:id="@+id/activity_formulario_aluno_nome"
+        android:layout_width="match_parent"
+        android:layout_margin="8dp"
+        android:hint="Nome"
+        android:inputType="textCapWords"
+        android:layout_height="wrap_content"/>
+
+    <EditText android:id="@+id/activity_formulario_aluno_Telefone"
+        android:layout_width="match_parent"
+        android:layout_margin="8dp"
+        android:hint="Telefone"
+        android:inputType="phone"
+        android:layout_height="wrap_content"/>
+
+    <EditText android:id="@+id/activity_formulario_aluno_email"
+        android:layout_width="match_parent"
+        android:layout_margin="8dp"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+</ScrollView>
