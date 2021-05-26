@@ -16,7 +16,7 @@
         android:layout_marginBottom="16dp"
         android:clickable="true"
         android:focusable="true"
-        android:src="@drawable/ic_action_novo_aluno"
+        android:src="@drawable/ic_action_adicionar_aluno"
         app:backgroundTint="#E60000" />
 
     <ListView

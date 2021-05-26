@@ -57,7 +57,7 @@ public class Aluno implements Serializable {
     @NonNull
     @Override
     public String toString() {
-        return nome;
+        return nome +" - " + telefone;
     }
 
     public boolean temIdValido() {

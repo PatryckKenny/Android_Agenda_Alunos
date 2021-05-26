@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Agenda"
-        tools:ignore="AllowBackup">
+        tools:ignore="AllowBackup"
+        android:name=".AgendaApplication">
 
         <activity android:name=".ui.activity.ListaAlunosActivity">
             <intent-filter>
