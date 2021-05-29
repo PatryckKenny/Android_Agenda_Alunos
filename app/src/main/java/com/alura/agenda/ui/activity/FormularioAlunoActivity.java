@@ -6,7 +6,6 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.EditText;
 
 import com.alura.agenda.R;
@@ -97,9 +96,5 @@ public class FormularioAlunoActivity extends AppCompatActivity {
         aluno.setNome(nome);
         aluno.setTelefone(telefone);
         aluno.setEmail(email);
-    }
-
-    private void salva(Aluno alunoCriado) {
-        dao.salva(alunoCriado);
     }
 }

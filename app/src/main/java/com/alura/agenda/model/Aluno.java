@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 public class Aluno implements Serializable {
 
-    private int id =0;
+    private int id = 0;
     private String nome;
     private String telefone;
     private String email;
@@ -61,13 +61,7 @@ public class Aluno implements Serializable {
     }
 
     public boolean temIdValido() {
-        if(id > 0)
-        {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return id > 0;
 
     }
 }
