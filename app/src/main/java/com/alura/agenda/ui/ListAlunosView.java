@@ -6,8 +6,9 @@ import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.alura.agenda.database.AgendaDatabase;
+import com.alura.agenda.database.dao.AlunoDAO;
 import com.alura.agenda.model.Aluno;
-import com.alura.agenda.ui.activity.AlunoDAO;
 import com.alura.agenda.ui.adapter.ListaAlunosAdapter;
 
 public class ListAlunosView {
@@ -20,7 +21,8 @@ public class ListAlunosView {
     public ListAlunosView(Context context) {
         this.context = context;
         this.adapter = new ListaAlunosAdapter(this.context);
-        dao = new AlunoDAO();
+        dao = AgendaDatabase.getInstance(context)
+                .getRoomAlunoDAO();
     }
 
 

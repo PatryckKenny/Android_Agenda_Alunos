@@ -1,18 +1,25 @@
 package com.alura.agenda.model;
 
 import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
 
+@Entity
 public class Aluno implements Serializable {
 
+    @PrimaryKey(autoGenerate = true)
     private int id = 0;
     private String nome;
+    private String sobrenome;
     private String telefone;
     private String email;
 
-    public Aluno(int id, String nome, String telefone, String email) {
-        this.id = id;
+
+    @Ignore
+    public Aluno(String nome, String telefone, String email) {
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
@@ -53,6 +60,19 @@ public class Aluno implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
+    }
+
+    public String getNomeCompleto(){
+        return nome + "" + sobrenome;
+    }
+
 
     @NonNull
     @Override

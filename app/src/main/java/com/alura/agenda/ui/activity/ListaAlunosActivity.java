@@ -22,16 +22,15 @@ import static com.alura.agenda.ui.activity.ConstantesActivities.CHAVE_ALUNO;
 public class ListaAlunosActivity extends AppCompatActivity {
 
     public static final String TITULO_APPBAR = "Lista de Alunos";
-    private final ListAlunosView listAlunosView = new ListAlunosView(this);
+    private ListAlunosView listAlunosView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_alunos);
-
         setTitle(TITULO_APPBAR);
-
+        listAlunosView = new ListAlunosView(this);
         configuraNovoAluno();
         configuraLista();
     }
@@ -55,7 +54,6 @@ public class ListaAlunosActivity extends AppCompatActivity {
     public boolean onContextItemSelected(@NonNull MenuItem item) {
 
         int itemId = item.getItemId();
-//        CharSequence tituloDoMenu = item.getTitle();
         if (itemId == R.id.activity_lista_aluno_remover) {
             listAlunosView.confirmaRemocao(item);
 
