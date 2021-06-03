@@ -2,7 +2,6 @@ package com.alura.agenda.ui;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -30,14 +29,11 @@ public class ListAlunosView {
                 .Builder(context)
                 .setTitle("Removendo aluno")
                 .setMessage("Tem certeza que gostaria de remover o aluno?")
-                .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        AdapterView.AdapterContextMenuInfo meuInfo = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
-                        Aluno alunoEscolhido = adapter.getItem(meuInfo.position);
-                        remove(alunoEscolhido);
+                .setPositiveButton("Sim", (dialog, which) -> {
+                    AdapterView.AdapterContextMenuInfo meuInfo = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+                    Aluno alunoEscolhido = adapter.getItem(meuInfo.position);
+                    remove(alunoEscolhido);
 
-                    }
                 })
                 .setNegativeButton("Não", null)
                 .show();
